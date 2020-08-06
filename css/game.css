@@ -1,0 +1,310 @@
+
+:root {
+    /* Variables encargadas de sumar y mostrar los puntos de las dianas normales y especiales. */
+    --kang-points: 1;
+    --kang-points-str: '1';
+
+    counter-reset: points;
+
+    --text-color: white;
+    --accent-color: lime;
+    --kang-size: 7rem;
+    --kang-shadow-size: 1rem;
+    --kang-total-size: calc(var(--bullseye-size) + var(--bullseye-shadow-size) * 2);
+    --kang-color: lime; 
+    --total-kang: 8;
+    --kang-animation-duration: 2.7s;
+    --score-delay: calc(var(--kang-animation-duration) * var(--total-kang));
+      }
+
+/*inicio*/
+#start{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: red;
+    text-shadow: 2px 2px 0 lime;
+    background-image: url(../img/game/skygif.gif);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#result{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+    background: yellow;
+    color: black;
+    font-size: 40px;
+    border-radius: 10px;
+    font-weight: 200;
+    animation: result 20s forwards;
+
+}
+
+#stage:target #start{
+    display: none;
+}
+
+.start-text{
+    animation: pulse 0.5s ease-out infinite;
+}
+
+#stage:target .kang {
+    animation-name: kang-movement;
+}
+
+#stage:target #score {
+    animation: score-end 0.4s ease-in-out var(--score-delay) forwards;
+}
+
+
+
+*:after {
+    box-sizing: border-box;
+}
+
+
+.kang-input:checked {
+    --points: var(--kang-points);
+    counter-increment: points var(--kang-points);
+  }
+
+.kang-input.special:checked {
+    --points: var(--kang-special-points);
+  }
+
+.kang:after {
+    --points-str: var(--kang-points-str);
+    content: '+' var(--points-str);
+  }
+  
+.kang-special:after {
+    --points-str: var(--bullseye-special-points-str);
+  }
+
+#score:before {
+    content: counter(points);
+  }
+
+#score {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    font-weight: 500;
+    color: red;
+    text-shadow: 2px 2px 0px blue;
+    pointer-events: none;
+    font-size: 75px;
+    animation: score-end 0.4s ease-in-out var(--score-delay) forwards;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-color);
+    background-image: url(../img/game/skygif.gif);
+    background-size: cover;
+    user-select: none;
+    padding: 25px;
+  }
+  
+.kang {
+    --points: var(--kang-points);
+    margin: 0 20px 20px 0;
+    position: absolute;
+    opacity: 0;
+    top: calc(-1 * var(--bullseye-total-size));
+    animation-name: kang-movement;
+    animation-timing-function: ease-out;
+    animation-duration: var(--kang-animation-duration);
+    animation-delay: calc(var(--kang-animation-duration) * (var(--index) - 1));
+}
+
+.kang:nth-of-type(1){
+    --index: 1;
+    left: 50%;
+}
+
+.kang:nth-of-type(2){
+    --index: 2;
+    right: 75%;
+}
+
+.kang:nth-of-type(3){
+    --index: 3;
+    left: 25%;
+}
+
+.kang:nth-of-type(4){
+    --index: 4;
+    left: 57%;
+}
+
+.kang:nth-of-type(5){
+    --index: 5;
+    left: 15%;
+}
+
+.kang:nth-of-type(6){
+    --index: 6;
+    right: 90%;
+}
+
+.kang:nth-of-type(7){
+    --index: 7;
+    left: 50%;
+}
+
+.kang:nth-of-type(8){
+    --index: 8;
+    right: 20%;
+}
+
+.kang-input {
+    opacity: 0;
+    position: absolute;
+    left: -99999px;
+}
+
+.kang-input:checked + .kang{
+    pointer-events: none;
+    animation-play-state: paused;
+}
+
+.kang:before {
+color: var(--kang-color);
+content: "";
+display: inline-block;
+width: var(--kang-size);
+height: var(--kang-size);
+border-radius: 50%;
+background-image: radial-gradient(closest-side, lime 20%, white 40%, lime 0, lime 60%, white 0, white 80%, lime 0);
+box-shadow: 5px 5px var(--kang-shadow-size) rgba(0, 0, 0, 0.4);
+transition: 0.8s ease-out, transform 0.1s ease-in;  
+}
+
+.kang-input:checked + .kang:before{
+    --color: grey;
+    animation: kang-fadeout 0.8s ease-in-out forwards;
+}
+
+.kang:after{
+    --points-str: var(--kang-points-str);
+    content: '+' var(--points-str);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 0px va(--accent-color);
+    opacity: 0;
+}
+
+.kang-input:checked + .kang:after{
+    animation: points-up 1.5s forwards;
+}
+
+/*Instrucciones*/
+
+footer{
+    background-color: rgba(79, 231, 23  , 0.5);
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    font-family: cursive;
+    color: black;
+}
+
+footer p{
+    padding: 0 15px 0 15px;
+}
+
+@keyframes kang-fadeout {
+    12% {
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+@keyframes points-up {
+    10% {
+      transform: translate(-50%, calc(-50% - 3rem));
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+@keyframes kang-movement {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(10000);
+        opacity: 0;
+    }
+  }
+  
+@keyframes score-end {
+    100% {
+      transform: translateY(calc(100% - 50vh)) scale(2.2);
+    }
+  }
+
+@keyframes pulse{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes result{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

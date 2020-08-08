@@ -69,3 +69,9 @@ glass.addEventListener("click", function(){
     glass.style.transitionDuration = "2s";
     glass.style.transitionDelay = "3s";
 })
+
+let entryDoor = document.getElementById("entry-door");
+
+entryDoor.addEventListener("click", function(){
+    entryDoor.className = "open";
+})

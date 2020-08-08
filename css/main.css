@@ -4,7 +4,7 @@
 
 html {
     margin: 0;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 main{
@@ -172,16 +172,49 @@ audio{
 #entry{
     grid-row: 3;
     grid-column: 2;
+    background-image: url(../img/entry/intro-background.png);
+    perspective: 450px;
 }
 
-#hall{
-    grid-row: 2;
-    grid-column: 2;
+#entry-door, #to-hall{
+    position: absolute;
+    bottom: 191px;
+    left: 499px;
 }
+
+#entry-door{
+    left: 496px;
+}
+
+.open{
+    transform: rotateY(-76deg);
+    transition: 2s;
+    transform-origin: right; 
+}
+
+#homer-walking, #homer-stand{
+    width: 12%;
+    position: absolute;
+    bottom: 50px;
+    right: 250px;
+}
+
+.walk{
+    transform: translateX(-450px);
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+
+#entry article{
+    align-self: start;
+}
+
 
 /*================================HALL================================*/
 
 #hall{
+    grid-row: 2;
+    grid-column: 2;
     width: 100vw;
     height: 100vh;
     background-color:pink;
@@ -671,7 +704,7 @@ h1{
     }
 }
 
-.typing{
+/* .typing{
     position: absolute;
     width: 100vw;
     height: 30vh;
@@ -716,7 +749,7 @@ h1 span{
     to{
         border-right-color: transparent;
     }
-}
+} */
 
 /*================================KITCHEN================================*/
  
@@ -837,10 +870,10 @@ h1 span{
 #hallway{
     grid-row: 1;
     grid-column: 2;
-    background-image: url(../img/hallway/hallway.jpg);
+    background-image: url(../img/hallway/hallway1.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%;
+    /* background-size: 60%; */
     background-color: #d07e8a;
 }
 

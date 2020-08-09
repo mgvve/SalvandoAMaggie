@@ -376,6 +376,7 @@ audio{
     background-color: transparent;
     position: absolute;
     left: 44.4%;
+    bottom: 26%;
 }
 #estante5{
     justify-content: flex-start;
@@ -609,6 +610,55 @@ h1{
     top:18%;
     
 
+}
+#baba{
+    position: absolute;
+    width:100px;
+    height:130px;
+    left:15%;
+    animation: baba 1.3s infinite ease-out; 
+}
+@keyframes baba{
+    0%{
+        opacity:0;
+        transform: translateY(-100px);
+    }
+    50%{
+        opacity:1;
+        transform:translateY(200px)
+    }
+    100%{
+        opacity:1;
+        transform: translateY(400px);
+    }
+}
+#charcobaba{
+    position: absolute;
+    bottom:10%;
+    left:15%;
+    width: 120px;
+    height:90px;
+    animation: charcobaba 2s infinite linear ;
+}
+@keyframes charcobaba {
+    0%{
+        opacity:0;
+        
+    }
+    25%{
+        opacity:0
+    }
+    50%{
+        opacity:0
+    }
+    70%{
+        opacity:1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1.6);
+    }
 }
 #cuadrosimpsons{
     position:absolute;
@@ -1309,11 +1359,30 @@ input {
     align-items: center;
     background-color:turquoise
 }
-#frontside *{
+#frontside div{
     border:black solid;
     width: 86%;
     height: 13%;
-    background-color:rgb(27, 189, 173)
+    background-color:rgb(27, 189, 173);
+    display:flex;
+    align-items: flex-end;
+    justify-content:space-around
+}
+.est{position: relative;
+
+}
+#chanchito,#parlante,#parlante2,#fuente{
+  width: 30%;
+  height:80%
+}
+#cajas{
+    width:90%;
+    height: 90%;
+}
+
+#perfume{
+    width: 30%;
+    height: 40%;
 }
 #cama{
     width: 43%;
@@ -1383,11 +1452,9 @@ input {
     position:absolute;
     bottom:60%;
     right:5%;
-    border-radius:4em;
     transform-origin:top left;
     /* transform:rotateY(-98deg); */
-    border-color:papayawhip;
-    border-style: solid;
+
     transition:2s linear
 }
 #cuadrolisa:hover{

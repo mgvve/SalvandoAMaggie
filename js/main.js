@@ -11,13 +11,15 @@ function notTrue(){
 }
   
 (function(){
-  var saludo = function(){
+  var letraR = function(){
     
       boton.innerHTML= "<img class='letraa' src='https://i.pinimg.com/originals/99/ee/50/99ee50dbb4c1b790e277acd66f511bbc.gif'></img><img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'> "
-   };
+      
+    };
    let boton = document.getElementById("boton")
-    boton.addEventListener("click", saludo);
+    boton.addEventListener("click",letraR);
   }());
+
   (function(){
     
      let puerta = document.getElementById("puertacentral")
@@ -75,3 +77,24 @@ let entryDoor = document.getElementById("entry-door");
 entryDoor.addEventListener("click", function(){
     entryDoor.className = "open";
 })
+//Recolectador de Letras
+
+ function Hoover(){let recolectador = document.createElement("div")
+    recolectador.id="recolectador"
+    let hall=document.getElementById("hall")
+    hall.appendChild(recolectador)
+    recolectador.innerHTML="<h2 class='letterE'>E</h2>"
+ }
+ function HooverG(){let recolectadr = document.createElement("div")
+    recolectadr.id="recolectador"
+    let living=document.getElementById("living")
+    living.appendChild(recolectadr)
+    recolectadr.innerHTML="<h2 class='letterE'> E H</h2>"
+ }
+function rC(){ let recolecta = document.createElement("div")
+    recolecta.id="recolectador"
+    let lisaRoom = document.getElementById("lisa-room")
+    lisaRoom.appendChild(recolecta)
+    recolecta.innerHTML= "<h2 class='letterE'> R </h2>"
+    
+}

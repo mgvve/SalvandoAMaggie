@@ -45,10 +45,12 @@
             </div>
             
             <div id="hall">
+                <!-- <div id="recolectador"></div> -->
                 <div id="piso"></div>
                 <div id="puertacentral">
                  <button id="picaporte"></button>
                 </div>
+                
                 <div id="puertacdentro">
                     <div id="armario">
                         <div id="estante1"><div id="bote1"></div></div>
@@ -57,7 +59,7 @@
                             <img id="lapiz"src="https://i.pinimg.com/originals/0c/24/c4/0c24c472efce2ca9da0acdc591bc03a9.png" alt="">
                             </div>
                         <div id="estante4"> <img id="pelota" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
-                         <h3 id="letra">E</h3></div>
+                         <h3 onmouseover="Hoover()" id="letra">E</h3></div>
                         <div id="estante5"><img id="sombrero" src="https://images.vexels.com/media/users/3/164659/isolated/preview/ef1e943bbf78c6e61841680157a8a6b3-dibujos-animados-de-sombrero-de-sheriff-occidental-by-vexels.png" alt=""></div>
                         <div></div>
                     </div>
@@ -146,8 +148,8 @@
                 <div class="living-room-animation">
                     <div class="light1"></div>
                     <div class="light2"></div>
-                    <div class="cushion"><img src="img/living-room/cushion.png" alt="cushion" id="img_cushion"></div>
-                    <div class="letraG"><img src="img/living-room/letra g.png" alt="letrag" id="letrag"></div>
+                    <div onmouseover="HooverG()" class="cushion"><img src="img/living-room/cushion.png" alt="cushion" id="img_cushion"></div>
+                    <div   class="letraG"><img src="img/living-room/letra g.png" alt="letrag" id="letrag"></div>
                     <div class="nota1"><img src="img/living-room/nota1.png" alt="nota1" id="nota1"></div>
                     <div class="nota2"><img src="img/living-room/nota2.png" alt="nota2" id="nota2"></div>
                     <div class="shoe"><img src="img/living-room/shoe.png" alt="shoe" id="shoe"></div>
@@ -234,7 +236,7 @@
                         <button class="tirador"></button>
                         </div>
                         <div id="cajon">
-                            <button id="boton" ></button>
+                            <button onclick="rC()" id="boton" ></button>
                         </div>
                         <div id="cajon">
                             <button class="tirador"></button>

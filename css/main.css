@@ -709,7 +709,7 @@ h1{
     }
 } */
 
-/*================================LIVING================================*/
+/*================================LIVING====================================================================*/
 
 #living{
     grid-row: 2;
@@ -718,6 +718,11 @@ h1{
     background-size: 100vw 100vh;
 }
 
+#living .top-arrow{
+    position: absolute;
+    left: 10px;
+    top: 35px;
+}
 #img_cushion{
     width: 160px;
     height: 160px;
@@ -858,6 +863,7 @@ h1{
     }
 }
 
+
 /* .typing{
     position: absolute;
     width: 100vw;
@@ -905,19 +911,56 @@ h1 span{
     }
 } */
 
-/*================================KITCHEN================================*/
+/*================================KITCHEN=================================================================*/
  
 #kitchen{
     grid-row: 1;
     grid-column: 1;
+    background-image: url(../img/kitchen/kitchen.jpg);
+    background-size: 100vw 100vh;
 }
 
+#kitchen .bottom-arrow{
+    left: 15px;
+    bottom: 35vh;
+}
+
+
+#humo{
+    position: absolute;
+    top: 40px;
+    animation: light_1 2s infinite;
+}
+
+#sandwich{
+    width: 130px;
+    height: 100px;
+    bottom: 105px;
+    position: absolute;
+}
+
+.sandwich :hover{
+    animation-name: shoe_movement;
+    animation-duration: 4s;
+}
+
+.nota3{
+    position: absolute;
+    right: 70px;
+    top: 18vh;
+}
+#nota3{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    animation: musical-notes 0.09s infinite alternate;
+}
 /*================================DINING ROOM================================*/
 
 #dining-room{
     grid-row: 2;
     grid-column: 3;
-    background-image: url('../img/dining-room/background.jpg');
+    background-image: url(../img/dining-room/background.jpg);
     background-size: cover;
     overflow: hidden;
 }
@@ -1578,6 +1621,16 @@ input {
     animation: pulse 0.8s infinite;
 }
 
+#play-again{
+    width: 100px;
+    height: 100px;
+}
+
+.play-again{
+    position: absolute;
+    right: 25px;
+
+}
 #efect{
     position: absolute;
     width: 100vw;

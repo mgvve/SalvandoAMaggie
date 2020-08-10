@@ -219,7 +219,7 @@ audio{
 
 /*================================HALL================================*/
 #recolectador{
-    position: absolute;
+    position: absolute;;
     left:2%;
     top:2%;
     background-color: cornflowerblue;
@@ -230,6 +230,11 @@ audio{
     justify-content: space-around;
     border-radius:20px;
     border:black solid;
+    animation: recolectador 2s linear;
+}
+#letraE{
+    position: absolute;
+    bottom: 5%;
     animation: recolectador 2s linear;
 }
 @keyframes recolectador{
@@ -643,15 +648,16 @@ h1{
 @keyframes baba{
     0%{
         opacity:0;
-        transform: translateY(-100px);
+        transform: translateY(-100px) scale(0.2);
+        
     }
     50%{
         opacity:1;
-        transform:translateY(200px)
+        transform:translateY(200px) scale(0.7)
     }
     100%{
         opacity:1;
-        transform: translateY(400px);
+        transform: translateY(400px) scale(1.2);
     }
 }
 #charcobaba{
@@ -660,7 +666,7 @@ h1{
     left:15%;
     width: 120px;
     height:90px;
-    animation: charcobaba 2s infinite linear ;
+    animation: charcobaba 1.5s infinite linear ;
 }
 @keyframes charcobaba {
     0%{
@@ -688,7 +694,7 @@ h1{
     right:14%;
     top:24%;
     transform-origin: top left;
-    transition:all 2s linear
+    transition:all 1s linear
 }
 #cuadrosimpsons:hover{
     transform:rotateY(-145deg)
@@ -1388,14 +1394,30 @@ input {
     background-color:rgb(27, 189, 173);
     display:flex;
     align-items: flex-end;
-    justify-content:space-around
+    justify-content:space-around;
+    
 }
 .est{position: relative;
 
 }
 #chanchito,#parlante,#parlante2,#fuente{
   width: 30%;
-  height:80%
+  height:80%;
+  transition:1s linear
+}
+#chanchito:hover{
+    transform: translateX(-40px);
+}
+#parlante,#parlante2{
+    animation: parlantes 0.5s infinite alternate;
+}
+@keyframes parlantes{
+    from{
+       transform: scale(1.4);
+    }
+    to{ transform: 1;
+
+    }
 }
 #cajas{
     width:90%;
@@ -1405,6 +1427,13 @@ input {
 #perfume{
     width: 30%;
     height: 40%;
+    transition: 1s linear;
+}
+#perfume:hover{
+    transform:translateX(30px)
+}
+#fuente:hover{
+    transform: translateX(-30px);
 }
 #cama{
     width: 43%;

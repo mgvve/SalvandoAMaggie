@@ -79,18 +79,26 @@ entryDoor.addEventListener("click", function(){
 })
 //Recolectador de Letras
 
- function Hoover(){let recolectador = document.createElement("div")
-    recolectador.id="recolectador"
-    let hall=document.getElementById("hall")
-    hall.appendChild(recolectador)
-    recolectador.innerHTML="<h2 class='letterE'>E</h2>"
+function Hoover(){
+    let caja=document.getElementById("recolectador")
+    caja.innerHTML = "<h2> E </h2>"
+    
  }
- function HooverG(){let recolectadr = document.createElement("div")
-    recolectadr.id="recolectador"
-    let living=document.getElementById("living")
-    living.appendChild(recolectadr)
-    recolectadr.innerHTML="<h2 class='letterE'> E H</h2>"
- }
+//  function HooverG(){let recolectadr = document.createElement("div")
+//     recolectadr.id="recolectador"
+//     let living=document.getElementById("living")
+//     let letraE = document.getElementById("letra")
+//     living.appendChild(recolectadr)
+//     if(letraE!= function Hoover(){
+//         let caja=document.getElementById("recolectador")
+//         caja.innerHTML = "<h2> E </h2>"
+        
+//      } ){recolectadr.innerText=" ";}
+//      else{
+//         recolectadr.innerHTML="<h2> E H</h2>";
+//      }
+    
+// }
 function rC(){ let recolecta = document.createElement("div")
     recolecta.id="recolectador"
     let lisaRoom = document.getElementById("lisa-room")

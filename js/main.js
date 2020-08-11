@@ -26,8 +26,6 @@ function notTrue(){
       puerta.addEventListener("click",function(){puerta.style.transform = "rotateY(110deg)"} );
     }())
 
-//location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
-
 let start = document.getElementById("start");
 let homerRunning = document.getElementById("homer-running");
 
@@ -53,9 +51,8 @@ switcherOn.addEventListener("click", function(){
 switcherOff.addEventListener("click", function(){
     switcherOn.style.display = "block";
     switcherOff.style.display = "none";
+    hint.style.display = "none";
     darkness.className = "";
-    hint.innerText = "H";
-    hint.style.zIndex = "1";
 });
 
 curtain.addEventListener("click", function(){
@@ -79,22 +76,74 @@ entryDoor.addEventListener("click", function(){
 })
 //Recolectador de Letras
 
- function Hoover(){let recolectador = document.createElement("div")
-    recolectador.id="recolectador"
-    let hall=document.getElementById("hall")
-    hall.appendChild(recolectador)
-    recolectador.innerHTML="<h2 class='letterE'>E</h2>"
- }
- function HooverG(){let recolectadr = document.createElement("div")
-    recolectadr.id="recolectador"
-    let living=document.getElementById("living")
-    living.appendChild(recolectadr)
-    recolectadr.innerHTML="<h2 class='letterE'> E H</h2>"
- }
-function rC(){ let recolecta = document.createElement("div")
-    recolecta.id="recolectador"
-    let lisaRoom = document.getElementById("lisa-room")
-    lisaRoom.appendChild(recolecta)
-    recolecta.innerHTML= "<h2 class='letterE'> R </h2>"
+//  function Hoover(){let recolectador = document.createElement("div")
+//     recolectador.id="recolectador"
+//     let hall=document.getElementById("hall")
+//     hall.appendChild(recolectador)
+//     recolectador.innerHTML="<h2 class='letterE'>E</h2>"
+//  }
+//  function HooverG(){let recolectadr = document.createElement("div")
+//     recolectadr.id="recolectador"
+//     let living=document.getElementById("living")
+//     living.appendChild(recolectadr)
+//     recolectadr.innerHTML="<h2 class='letterE'> E H</h2>"
+//  }
+// function rC(){ let recolecta = document.createElement("div")
+//     recolecta.id="recolectador"
+//     let lisaRoom = document.getElementById("lisa-room")
+//     lisaRoom.appendChild(recolecta)
+//     recolecta.innerHTML= "<h2 class='letterE'> R </h2>"
     
+// }
+
+// ----------------
+// let contador = [];
+//let recolectador = document.getElementsByClassName("recolectador");
+
+
+// var letraG = "G";
+
+
+// function letraE () {
+//     var vacio = "";
+//     var letraAGuardar = document.getElementById("letra").innerText;
+//     document.getElementsByIdName("letra").innerHTML = vacio;
+//     contador.push(letraAGuardar)
+//     recolectador.innerHTML = contador;
+
+// }
+
+let recolectador = document.getElementsByClassName("recolectador");
+
+function letraE(){
+    letraAGuardar = document.getElementById("letra").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("letra").innerHTML = "";
+}
+
+function letraH(){
+    letraAGuardar = document.getElementById("hint").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("hint").innerHTML = "";
+}
+
+function letraL(){
+    letraAGuardar = document.getElementById("letterL").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("letterL").innerHTML = "";
+}
+
+function letraC(){
+    letraAGuardar = letterC;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    letterC = "";
+    document.getElementById("letter").innerHTML = "";
 }

@@ -45,7 +45,7 @@
             </div>
             
             <div id="hall">
-                <div id="recolectador"></div>
+                <div class="recolectador"></div>
                 <div id="piso"></div>
                 <div id="puertacentral">
                  <button id="picaporte"></button>
@@ -58,8 +58,8 @@
                         <div id="estante3">
                             <img id="lapiz"src="https://i.pinimg.com/originals/0c/24/c4/0c24c472efce2ca9da0acdc591bc03a9.png" alt="">
                             </div>
-                        <div id="estante4"> <img onmouseover="Hover()" id="pelota" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
-                         <h3  id="letra">E</h3></div>
+                        <div id="estante4"> <img id="pelota" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
+                        <h3 onclick="letraE()" id="letra" class="pista">E</h3></div>
                         <div id="estante5"><img id="sombrero" src="https://images.vexels.com/media/users/3/164659/isolated/preview/ef1e943bbf78c6e61841680157a8a6b3-dibujos-animados-de-sombrero-de-sheriff-occidental-by-vexels.png" alt=""></div>
                         <div></div>
                     </div>
@@ -135,7 +135,7 @@
                 </div>
                 
             <div id="living" class="slides">
-                <div id="recolectador3"></div>
+                <div class="recolectador"></div>
                 <div class="top-arrow">
                     <a href="#kitchen">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
@@ -150,7 +150,7 @@
                     <div class="light1"></div>
                     <div class="light2"></div>
                     <div onmouseover="HooverG()" class="cushion"><img src="img/living-room/cushion.png" alt="cushion" id="img_cushion"></div>
-                    <div   class="letraG"><img src="img/living-room/letra g.png" alt="letrag" id="letrag"></div>
+                    <div class="letraG" class="pista"><img src="img/living-room/letra g.png" alt="letrag" id="letrag"></div>
                     <div class="nota1"><img src="img/living-room/nota1.png" alt="nota1" id="nota1"></div>
                     <div class="nota2"><img src="img/living-room/nota2.png" alt="nota2" id="nota2"></div>
                     <div class="shoe"><img src="img/living-room/shoe.png" alt="shoe" id="shoe"></div>
@@ -162,6 +162,7 @@
             </div>
 
             <div id="kitchen" class="slides">
+                <div class="recolectador"></div>
                 <div class="bottom-arrow">
                     <a href="#living">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-down.png"/>
@@ -169,6 +170,7 @@
                 </div>
                 <div class="kitchen-animation">
                      <img src="img/kitchen/lampara.png" alt="" class="lampara">
+
                     <div class="humo"><img src="img/kitchen/humo.png" alt="humo" id="humo"> </div>
                     <div class="sandwich"><img src="img/kitchen/sandwich.png" alt="sandwich" id="sandwich"></div>
                     <div class="nota3"><img src="img/living-room/nota1.png" alt="nota3" id="nota3"></div>
@@ -182,8 +184,7 @@
             </div>
 
             <div id="dining-room" class="slides" >
-                <div id="recolectadr2"></div>
-                
+                <div class="recolectador"></div>
                 <div class="left-arrow">
                     <a href="#hall">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
@@ -199,7 +200,7 @@
                 <img onclick="Switcher_off()" src="img/dining-room/switcher.png" alt="switcher" id="switcher-on">
 
                 <article>Cuanto más oscuro, mejor se ve</article>
-                <h1 id="hint" class="">H</h1>
+                <h3 id="hint" class="" onclick="letraH()"></h3>
                 <div id="darkness">
                     <span id="switcher-off">            
                         <img src="img/dining-room/switcher.png" alt="switcher">
@@ -208,7 +209,8 @@
             </div>
 
             <div id="hallway" class="slides">
-                <div id="letterL">L</div>
+                <div class="recolectador"></div>
+                <div id="letterL" class="pista" onclick="letraL()">L</div>
                 <div id="false1">#</div>
                 <div id="false2">$</div>
                 <img src="img/caja cerrada.png" alt="box" id="box1">
@@ -227,6 +229,7 @@
             </div>
 
             <div id="lisa-room" class="slides">
+                <div class="recolectador"></div>
                 <div id="pisolisa"></div>
                 <div id="ventana">
                     <div id="ventLeft"> 
@@ -288,7 +291,7 @@
                 <div id="cabecera"></div>
                 <img id="osito" src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/58230/teddy-bear-emoji-clipart-md.png" alt="">
                 <img id="cuadrolisa" src="img/lisa-room/cuadrolisa.png" alt="">
-                <div id="lisa"></div>
+                <img id="lisa" src="https://www.gifmania.com/Gif-Animados-Dibujos-Animados/Imagenes-FOX/Los-Simpson/Lisa-Simpson/lisa-simpson4-33473.gif" alt="lisa">
                 <img id="saxofon" src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49554/saxophone-emoji-clipart-md.png" alt="">
                
                 <div class="typing">
@@ -303,6 +306,7 @@
             </div>
 
             <div id="bart-room" class="slides">
+                <div class="recolectador"></div>
                 <div class="form">
                     <form action="#maggie-room" id="form">
                         <label>
@@ -315,7 +319,7 @@
                 </div>
                 <button id="false" ondblclick="notTrue()"></button>
                 <img src="img/pelota.png" alt="ball" id="ball">
-                <button id="letter" ondblclick="show(letterC)"></button>
+                <button id="letter" ondblclick="show(letterC)" onclick="letraC()"></button>
                 <div class="right-arrow">
                     <a href="#lisa-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
@@ -355,7 +359,7 @@
                 <img src="img/end/serpentina.gif" alt="end" id="efect">
                 <div class="play-again">
                     <a href="#intro">
-                        <img src="../Saving Maggie/img/end/playagain.png" id="play-again">
+                        <img src="img/end/playagain.png" id="play-again">
                     </a>
                 </div>
             </div>

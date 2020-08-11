@@ -12,8 +12,14 @@ function notTrue(){
   
 (function(){
   var letraR = function(){
-    
-      boton.innerHTML= "<img class='letraa' src='https://i.pinimg.com/originals/99/ee/50/99ee50dbb4c1b790e277acd66f511bbc.gif'></img><img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'> "
+     let lisaroom = document.getElementById("lisa-room")
+      let lisafeliz = document.createElement("div");
+      lisafeliz.classList.add("lisafeliz")
+      lisafeliz.innerHTML ="<img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'>"
+    lisaroom.appendChild(lisafeliz)
+    let lisa = document.getElementById("lisa")
+    lisaroom.removeChild(lisa)
+      boton.innerHTML= "<h3 class='letraa'> R </h3> "
       
     };
    let boton = document.getElementById("boton")
@@ -25,8 +31,6 @@ function notTrue(){
      let puerta = document.getElementById("puertacentral")
       puerta.addEventListener("click",function(){puerta.style.transform = "rotateY(110deg)"} );
     }())
-
-//location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
 
 let start = document.getElementById("start");
 let homerRunning = document.getElementById("homer-running");
@@ -53,9 +57,8 @@ switcherOn.addEventListener("click", function(){
 switcherOff.addEventListener("click", function(){
     switcherOn.style.display = "block";
     switcherOff.style.display = "none";
+    hint.style.display = "none";
     darkness.className = "";
-    hint.innerText = "H";
-    hint.style.zIndex = "1";
 });
 
 curtain.addEventListener("click", function(){
@@ -79,31 +82,74 @@ entryDoor.addEventListener("click", function(){
 })
 //Recolectador de Letras
 
-function Hover(){
-    let cajaHall = document.getElementById("recolectador")
-    let cajaDRoom =document.getElementById("recolectadr2")
-    cajaHall.innerHTML = "<h2> E </h2>";
-    cajaDRoom.innerHTML= "<h2> E </h2>"
+//  function Hoover(){let recolectador = document.createElement("div")
+//     recolectador.id="recolectador"
+//     let hall=document.getElementById("hall")
+//     hall.appendChild(recolectador)
+//     recolectador.innerHTML="<h2 class='letterE'>E</h2>"
+//  }
+//  function HooverG(){let recolectadr = document.createElement("div")
+//     recolectadr.id="recolectador"
+//     let living=document.getElementById("living")
+//     living.appendChild(recolectadr)
+//     recolectadr.innerHTML="<h2 class='letterE'> E H</h2>"
+//  }
+// function rC(){ let recolecta = document.createElement("div")
+//     recolecta.id="recolectador"
+//     let lisaRoom = document.getElementById("lisa-room")
+//     lisaRoom.appendChild(recolecta)
+//     recolecta.innerHTML= "<h2 class='letterE'> R </h2>"
     
- }
- function Switcher_off(){
-    let cajaDR=document.getElementById("recolectadr2")
-    cajaDR.innerHTML = "<h2>E A </h2>"
-    let cajaH =document.getElementById("recolectador")
-    cajaH.innerHTML = "<h2>E A </h2>"
-    let cajaL = document.getElementById("recolectador3")
-    cajaL.innerHTML ="<h2>E A</h2>"
+// }
+
+// ----------------
+// let contador = [];
+//let recolectador = document.getElementsByClassName("recolectador");
+
+
+// var letraG = "G";
+
+
+// function letraE () {
+//     var vacio = "";
+//     var letraAGuardar = document.getElementById("letra").innerText;
+//     document.getElementsByIdName("letra").innerHTML = vacio;
+//     contador.push(letraAGuardar)
+//     recolectador.innerHTML = contador;
+
+// }
+
+let recolectador = document.getElementsByClassName("recolectador");
+
+function letraE(){
+    letraAGuardar = document.getElementById("letra").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("letra").innerHTML = "";
 }
 
- function HooverG(){let cajaLiving = document.getElementById("recolectador3")
-  cajaLiving.innerHTML = "<h2>E A H</h2>"
-  let cajaHll = document.getElementById("recolectador")
-    cajaHll.innerHTML = "<h2>E A H</h2>"
+function letraH(){
+    letraAGuardar = document.getElementById("hint").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("hint").innerHTML = "";
 }
-function rC(){ let recolecta = document.createElement("div")
-    recolecta.id="recolectador"
-    let lisaRoom = document.getElementById("lisa-room")
-    lisaRoom.appendChild(recolecta)
-    recolecta.innerHTML= "<h2 class='letterE'> R </h2>"
-    
+
+function letraL(){
+    letraAGuardar = document.getElementById("letterL").innerText;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    document.getElementById("letterL").innerHTML = "";
+}
+
+function letraC(){
+    letraAGuardar = letterC;
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += letraAGuardar;
+    }
+    letterC = "";
+    document.getElementById("letter").innerHTML = "";
 }

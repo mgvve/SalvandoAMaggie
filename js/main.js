@@ -79,26 +79,27 @@ entryDoor.addEventListener("click", function(){
 })
 //Recolectador de Letras
 
-function Hoover(){
-    let caja=document.getElementById("recolectador")
-    caja.innerHTML = "<h2> E </h2>"
+function Hover(){
+    let cajaHall = document.getElementById("recolectador")
+    let cajaDRoom =document.getElementById("recolectadr2")
+    cajaHall.innerHTML = "<h2> E </h2>";
+    cajaDRoom.innerHTML= "<h2> E </h2>"
     
  }
-//  function HooverG(){let recolectadr = document.createElement("div")
-//     recolectadr.id="recolectador"
-//     let living=document.getElementById("living")
-//     let letraE = document.getElementById("letra")
-//     living.appendChild(recolectadr)
-//     if(letraE!= function Hoover(){
-//         let caja=document.getElementById("recolectador")
-//         caja.innerHTML = "<h2> E </h2>"
-        
-//      } ){recolectadr.innerText=" ";}
-//      else{
-//         recolectadr.innerHTML="<h2> E H</h2>";
-//      }
-    
-// }
+ function Switcher_off(){
+    let cajaDR=document.getElementById("recolectadr2")
+    cajaDR.innerHTML = "<h2>E A </h2>"
+    let cajaH =document.getElementById("recolectador")
+    cajaH.innerHTML = "<h2>E A </h2>"
+    let cajaL = document.getElementById("recolectador3")
+    cajaL.innerHTML ="<h2>E A</h2>"
+}
+
+ function HooverG(){let cajaLiving = document.getElementById("recolectador3")
+  cajaLiving.innerHTML = "<h2>E A H</h2>"
+  let cajaHll = document.getElementById("recolectador")
+    cajaHll.innerHTML = "<h2>E A H</h2>"
+}
 function rC(){ let recolecta = document.createElement("div")
     recolecta.id="recolectador"
     let lisaRoom = document.getElementById("lisa-room")

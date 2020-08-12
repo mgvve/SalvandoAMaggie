@@ -12,8 +12,14 @@ function notTrue(){
   
 (function(){
   var letraR = function(){
-    
-      boton.innerHTML= "<img class='letraa' src='https://i.pinimg.com/originals/99/ee/50/99ee50dbb4c1b790e277acd66f511bbc.gif'></img><img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'> "
+     let lisaroom = document.getElementById("lisa-room")
+      let lisafeliz = document.createElement("div");
+      lisafeliz.classList.add("lisafeliz")
+      lisafeliz.innerHTML ="<img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'>"
+    lisaroom.appendChild(lisafeliz)
+    let lisa = document.getElementById("lisa")
+    lisaroom.removeChild(lisa)
+      boton.innerHTML= "<h3 class='letraa'> R </h3> "
       
     };
    let boton = document.getElementById("boton")

@@ -1,4 +1,4 @@
-//location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
+
 
 // Bart Room
 
@@ -16,18 +16,40 @@ function notTrue(){
 
 let letterR = "R"
 
-function showLisa(){
+function showLisaAndLetter(){
     let lisaroom = document.getElementById("lisa-room");
     let lisafeliz = document.createElement("div");
     lisafeliz.classList.add("lisafeliz");
     lisafeliz.innerHTML ="<img class='lisafeliz' src='http://www.mundosimpson.com.ar/galerias/anim/xlisa02.gif'>";
     lisaroom.appendChild(lisafeliz);
-    let lisa = document.getElementById("lisa");
-    lisaroom.removeChild(lisa);
+    let lisaAnimada = document.getElementById("lisaanimada");
+    lisaroom.removeChild(lisaAnimada);
 
     document.getElementById("letterR").innerHTML = letterR;
+    let mensajeParlante1 = document.getElementById("mensajeParlante")
+    let mensajeParlante2 =document.getElementById("mensajeparlante2")
+    lisaroom.removeChild(mensajeParlante1)
+    lisaroom.removeChild(mensajeParlante2)
 }
-  
+
+
+function parlante1(){
+    let mensaje= document.getElementById("mensajeParlante")
+    mensaje.innerText="Aqui no hay nada, sigue buscando"
+}
+function parlante2(){
+    let mensaje2= document.getElementById("mensajeparlante2")
+    mensaje2.innerText="Quiza la encuentres muy conservada"
+
+}
+function moverMouse(){
+    let lisasroom = document.getElementById("lisa-room")
+    let lisa = document.getElementById("lisa")
+    let lisaanimada = document.getElementById("lisaanimada")
+    lisaanimada.style.display="block"
+    lisasroom.removeChild(lisa)
+
+}
 // Hall
 
   (function(){
@@ -44,6 +66,21 @@ function moveCushion(){
     cushion.classList.add("cushionMov");
     document.getElementById("letrag").style.zIndex = 2;
 }
+// Kitchen
+function atenderTel(){
+    let telefono = document.getElementById("telefono");
+    telefono.style.transform = "rotateZ(-50deg)";
+    let kitchen = document.getElementById("kitchen")
+    let notaMusical= document.getElementById("nota3")
+    kitchen.removeChild(notaMusical)
+    let mensaje = document.getElementById("mensaje");
+    mensaje.innerText="Un anciano malvado busca vengarse de su asesin@"
+    
+ }
+ function colgar(){
+     telefono.style.transform = "rotateZ(0deg)"
+ }
+ 
 
 // Intro
 
@@ -157,28 +194,4 @@ function letraS(){
     document.getElementById("letterS").innerHTML = "";
 
 }
-// JS DEL TELEFONO
-function atenderTel(){
-   let telefono = document.getElementById("telefono");
-   telefono.style.transform = "rotateZ(-50deg)";
-   let kitchen = document.getElementById("kitchen")
-   let notaMusical= document.getElementById("nota3")
-   kitchen.removeChild(notaMusical)
-   let mensaje = document.getElementById("mensaje");
-   mensaje.innerText="Un anciano malvado busca vengarse de su asesin@"
-   
-}
-function colgar(){
-    telefono.style.transform = "rotateZ(0deg)"
-}
 
-//EVENTOS DEL CUARTO DE LISA
-function parlante1(){
-    let mensaje= document.getElementById("mensajeParlante")
-    mensaje.innerText="Aqui no hay nada, sigue buscando"
-}
-function parlante2(){
-    let mensaje2= document.getElementById("mensajeparlante2")
-    mensaje2.innerText="Quiza la encuentres muy conservada"
-
-}

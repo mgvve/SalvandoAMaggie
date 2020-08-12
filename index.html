@@ -231,7 +231,7 @@
                 </div>
             </div>
 
-            <div id="lisa-room" class="slides">
+            <div onmousemove="moverMouse()" id="lisa-room" class="slides">
                 <div class="recolectador"></div>
                 <div id="pisolisa"></div>
                 <div id="ventana">
@@ -255,7 +255,7 @@
                         <button class="tirador"></button>
                         </div>
                         <div id="cajon">
-                            <button onclick="showLisa()" id="boton"></button>
+                            <button onclick="showLisaAndLetter()" id="boton"></button>
                         </div>
                         <div id="cajon">
                             <button class="tirador"></button>
@@ -265,7 +265,8 @@
                         </div>
                     </div>
                 </div>
-                <h3 id="letterR" onclick="letraR()" style="z-index: 10;" ></h3>
+                <img id="lisaanimada" src="img/lisa-room/lisaanimada.png" alt="">
+                <h3 id="letterR" onclick="letraR()" style="z-index: 10" ></h3>
                 <div id="leftside"></div>
                 <div id="frontside">
                     <div ><img onmouseover="parlante1()"class="est" id="parlante" src="img/lisa-room/parlante.png" alt="">

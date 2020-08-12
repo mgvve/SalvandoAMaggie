@@ -1486,6 +1486,15 @@ input {
 #boton:hover{
     transform:scale(1.5)
 }
+#lisaanimada{
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    left:16%;
+    bottom:20%;
+    display:none;
+    z-index: 2;
+}
 
 #letterR{
     position:absolute;

@@ -19,7 +19,8 @@ function notTrue(){
     lisaroom.appendChild(lisafeliz)
     let lisa = document.getElementById("lisa")
     lisaroom.removeChild(lisa)
-      boton.innerHTML= "<h3 class='letraa'> R </h3> "
+     let letraR = "<h3 id = 'letraR'> R <h3>"
+      boton.innerHTML= letraR
       
     };
    let boton = document.getElementById("boton")
@@ -152,4 +153,26 @@ function letraC(){
     }
     letterC = "";
     document.getElementById("letter").innerHTML = "";
+}
+// JS DEL TELEFONO
+function atenderTel(){
+   let telefono = document.getElementById("telefono");
+   telefono.style.transform = "rotateZ(-50deg)";
+   let kitchen = document.getElementById("kitchen")
+   let notaMusical= document.getElementById("nota3")
+   kitchen.removeChild(notaMusical)
+   let mensaje = document.getElementById("mensaje");
+   mensaje.innerText="Un anciano malvado busca vengarse de su asesin@"
+//    telefono.addEventListener("click", function(){
+//     telefono.style.transform = "rotateZ(50deg)"
+}
+
+//EVENTOS DEL CUARTO DE LISA
+function parlante1(){
+    let mensaje= document.getElementById("mensajeParlante")
+    mensaje.innerText="Aqui no hay nada, sigue buscando"
+}
+function parlante2(){
+    let mensaje2= document.getElementById("mensajeparlante2")
+    mensaje2.innerText="Quiza la encuentres muy conservada"
 }

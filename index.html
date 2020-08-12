@@ -59,7 +59,7 @@
                             <img id="lapiz"src="https://i.pinimg.com/originals/0c/24/c4/0c24c472efce2ca9da0acdc591bc03a9.png" alt="">
                             </div>
                         <div id="estante4"> <img id="pelota" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
-                        <h3 onclick="letraE()" id="letra" class="pista">E</h3></div>
+                        <h3 onclick="letraE()" id="letra">E</h3></div>
                         <div id="estante5"><img id="sombrero" src="https://images.vexels.com/media/users/3/164659/isolated/preview/ef1e943bbf78c6e61841680157a8a6b3-dibujos-animados-de-sombrero-de-sheriff-occidental-by-vexels.png" alt=""></div>
                         <div></div>
                     </div>
@@ -149,8 +149,8 @@
                 <div class="living-room-animation">
                     <div class="light1"></div>
                     <div class="light2"></div>
-                    <div onmouseover="HooverG()" class="cushion"><img src="img/living-room/cushion.png" alt="cushion" id="img_cushion"></div>
-                    <div class="letraG" class="pista"><img src="img/living-room/letra g.png" alt="letrag" id="letrag"></div>
+                    <div class="cushion"><img src="img/living-room/cushion.png" alt="cushion" id="img_cushion" onclick="moveCushion()"></div>
+                    <div class="letraG"><img src="img/living-room/letra g.png" alt="letrag" onclick="letraH()" id="letrag" ></div>
                     <div class="nota1"><img src="img/living-room/nota1.png" alt="nota1" id="nota1"></div>
                     <div class="nota2"><img src="img/living-room/nota2.png" alt="nota2" id="nota2"></div>
                     <div class="shoe"><img src="img/living-room/shoe.png" alt="shoe" id="shoe"></div>
@@ -175,7 +175,7 @@
                     <div class="sandwich"><img src="img/kitchen/sandwich.png" alt="sandwich" id="sandwich"></div>
                   
                     <img id="cafetera" src="img/kitchen/cafetera (1).png" alt="">
-                    <h3 id="letterS">S</h3>
+                    <h3 id="letterS" onclick="letraS()">S</h3>
                     <img id="manopla" src="img/kitchen/manopla.png" alt="">
                     <img onclick="atenderTel()" id="telefono" src="img/kitchen/telefono.png" alt="">
                 </div>
@@ -203,7 +203,7 @@
                 <img onclick="Switcher_off()" src="img/dining-room/switcher.png" alt="switcher" id="switcher-on">
 
                 <article>Cuanto más oscuro, mejor se ve</article>
-                <h3 id="hint" class="" onclick="letraH()"></h3>
+                <h3 id="letterA" class="" onclick="letraA()"></h3>
                 <div id="darkness">
                     <span id="switcher-off">            
                         <img src="img/dining-room/switcher.png" alt="switcher">
@@ -242,7 +242,6 @@
                     <div id="ventRight">
                         <img id="nube1" src="https://library.kissclipart.com/20190831/yw/kissclipart-cloud-icon-weather-icon-0b0c1dc2c769d6f0.png" alt="nube">
                         <img id="nube2" src="https://library.kissclipart.com/20190831/yw/kissclipart-cloud-icon-weather-icon-0b0c1dc2c769d6f0.png" alt="nube">
-                    
                     </div>  
                 </div>
                 <div id="mesita">
@@ -256,7 +255,7 @@
                         <button class="tirador"></button>
                         </div>
                         <div id="cajon">
-                            <button onclick="rC()" id="boton" ></button>
+                            <button onclick="showLisa()" id="boton"></button>
                         </div>
                         <div id="cajon">
                             <button class="tirador"></button>
@@ -266,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <h3 id="letterR" onclick="letraR()" style="z-index: 10;" ></h3>
                 <div id="leftside"></div>
                 <div id="frontside">
                     <div ><img class="est" id="parlante" src="img/lisa-room/parlante.png" alt="">
@@ -280,6 +279,7 @@
                     <div></div>
                     <div></div>
                 </div>
+<<<<<<< HEAD
                 <h4 id="mensajeParlante"></h4>
                 <h4 id="mensajeparlante2"></h4>
                 
@@ -287,6 +287,9 @@
                
                 
               
+=======
+                
+>>>>>>> 26ddec61b2a73b730dd6d449fde6f1929b4994b0
                 <div id="cama">
                     <div id="lado-central"></div>
                     <div id="lado-izquierdo"></div>
@@ -324,7 +327,7 @@
                 </div>
                 <button id="false" ondblclick="notTrue()"></button>
                 <img src="img/pelota.png" alt="ball" id="ball">
-                <button id="letter" ondblclick="show(letterC)" onclick="letraC()"></button>
+                <button id="letter" mouseover="show(letterC)" onclick="letraC()"></button>
                 <div class="right-arrow">
                     <a href="#lisa-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
@@ -338,18 +341,31 @@
             </div>
 
             <div id="maggie-room" class="slides">
-                <h2>Cuarto de Maggie</h2>
+                
                 <div class="top-arrow">
-                    <a href="#lisa-room">
-                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
-                    </a>
+                <a href="#lisa-room">
+                    <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
+                </a>
                 </div>
-                <div class="bottom-arrow"> <!--No creo que haga falta porque con el input podríamos ir al juego -->
-                    <a href="game.html">
-                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-down.png"/>
-                    </a>
+            
+            <img src="img/maggie_room/ball.png" width="100" height="100" id="pelota">              <img src="img/maggie room/Maggie's_Bedroom.jpg" alt="" id="cortina1"> 
+              <img src="img/maggie_room/elmo.png" alt="" id="elmo">
+                          
+             <img src="img/maggie_room/duende.png" alt="" id="duende_pared">
+              <img src="img/maggie room/Maggie's_Bedroom.jpg" alt="" id="object5">
+              <!--<p>alien</p>-->
+                <div class="bottom-arrow">
+                <a href="#game">
+                    <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-down.png"/>
+                </a>
+                
                 </div>
-            </div>
+                <!--<div class= "contenedorppal"> </div>-->
+                        <div class="black_square"> </div>
+                
+                      <p class="pista">mensaje secreto </p>   
+                                       
+        </div>
 
             <div id="game" class="slides">
                 <div class="left-arrow">

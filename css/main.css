@@ -738,9 +738,10 @@ h1{
     z-index: 2;
 }
 
-.cushion :hover{
+.cushionMov{
     animation-name: cushion_movement;
     animation-duration: 4s;
+    animation-fill-mode: forwards;
 }
 
 #letrag{
@@ -1060,7 +1061,7 @@ h1 span{
     overflow: hidden;
 }
 
-#dining-room article, #hint, #switcher-off{
+#dining-room article, #letterA, #switcher-off{
     position: absolute;
 }
 
@@ -1070,11 +1071,11 @@ h1 span{
     z-index: 0;
 }
 
-#hint{
+#letterA{
     right: 20px;
     top: 120px;
     color: rgba(104, 220, 255, 0.829);
-    z-index: 1;
+    z-index: 2;
 }
 
 #dining-room>img{
@@ -1764,9 +1765,169 @@ input {
 /*================================MAGGIE ROOM================================*/
 
 #maggie-room{
-    grid-row: 2;
-    grid-column: 4;
+	grid-row: 2;
+	grid-column: 4;
+	background-image: url('../img/maggie_room/back_room.jpg');
+    background-size: cover;
+    overflow:hidden ;
+	padding: 30px;
+	border: 5px dashed black;
+	box-sizing: border-box;
+	
 }
+#maggie-room>img {
+    z-index: 1;
+
+}
+
+
+.black_square{
+	position: absolute;
+	top : 35%;
+	left: 129px;
+
+	background-color: transparent;
+	
+	height: 85px;
+	width: 60px;
+	cursor: pointer;
+	
+	border: 1px solid black
+}  
+
+.pista{
+	max-width: 90%;
+   margin: auto;
+   color :black;
+   font-size: x-large;
+   font-weight: bold;
+   
+}
+
+black_square.dark_mode{
+
+	background-color: aqua;
+}
+.slides.dark_mode{
+	background:#00000088
+}
+
+
+			/*
+			width: 50px;
+			height: 50px;
+			margin-right: 1165px;
+			float: left;
+			
+			box-sizing: border-box;
+			position: absolute;
+			right:    0;
+			bottom:   0;
+			background-color: black;
+			justify-content: center;
+			flex-direction: column;
+			height: 1600px;
+			display: flex;
+			padding: 100px;
+			box-sizing: border-box;
+			width: 1600px;*/
+
+
+.square{
+	width: 50px;
+	height: 100px;
+	background-color:transparent;
+	border: 3px solid red;
+	margin: 10px;
+}
+
+
+
+/*.square .btn-holder {
+	justify-content: start;
+    display: flex;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    height: 20px;
+}*/
+
+.square.button {
+	height: 90px;
+	width: 40;
+}
+
+/*.greensquare {
+	display: none;
+
+}
+
+.greensquare_2{
+	display: none;
+}
+
+.greensquare_3{
+	display: none;
+}
+
+button {
+
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}*/
+#pelota{
+	position: absolute;
+	animation: rebota 1s alternate infinite  ease-out;
+
+}
+
+@keyframes rebota {
+	0% {
+	  bottom: 0;
+	  height: 70px;
+	}
+	100% {
+	  bottom: 400px;
+	}
+  }
+
+#elmo {
+	position: absolute;
+	top : 11%;
+	left: 310px;
+	height: 90px;
+	width:90px ;
+}
+
+#elmo:hover{
+	transform: translateX(300px);
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+
+}
+#duende_pared{
+	position: absolute;
+	top : 5%;
+	left: 1040px;
+	height: 200px;
+	width:150px ;
+	animation:girando linear infinite 2s ;
+	transform-style: initial;
+}
+/*#duende_pared:hover{
+	transform: translateX(400px);
+	transition-duration :1s;
+	transition-timing-function:ease-in-out ;
+
+}*/
+@keyframes girando {
+	0%   { transform: rotate(45deg) rotate3d(1,1,0,0deg);   }
+	25%  { transform: rotate(45deg) rotate3d(1,1,0,90deg);  }
+	50%  { transform: rotate(45deg) rotate3d(1,1,0,180deg); }
+	75%  { transform: rotate(45deg) rotate3d(1,1,0,270deg); }
+	100% { transform: rotate(45deg) rotate3d(1,1,0,360deg); }
+ }
 
 /*================================GAME================================*/
   

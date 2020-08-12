@@ -36,7 +36,7 @@ start.addEventListener("click", function(){
 let switcherOn = document.getElementById("switcher-on");
 let switcherOff = document.getElementById("switcher-off");
 let darkness = document.getElementById("darkness");
-let hint = document.getElementById("hint");
+let hint = document.getElementById("letterA");
 let glass = document.getElementById("glass");
 let curtain = document.getElementById("curtain");
 
@@ -123,12 +123,12 @@ function letraE(){
     document.getElementById("letra").innerHTML = "";
 }
 
-function letraH(){
-    letraAGuardar = document.getElementById("hint").innerText;
+function letraA(){
+    letraAGuardar = document.getElementById("letterA").innerText;
     for(let i=0; i<recolectador.length; i++){
         recolectador[i].innerText += letraAGuardar;
     }
-    document.getElementById("hint").innerHTML = "";
+    document.getElementById("letterA").innerHTML = "";
 }
 
 function letraL(){
@@ -146,4 +146,11 @@ function letraC(){
     }
     letterC = "";
     document.getElementById("letter").innerHTML = "";
+}
+
+function letraH(){
+    for(let i=0; i<recolectador.length; i++){
+        recolectador[i].innerText += "H";
+    }
+    document.getElementById("letrag").style.display = "none";
 }

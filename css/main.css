@@ -967,7 +967,7 @@ h1 span{
     overflow: hidden;
 }
 
-#dining-room article, #hint, #switcher-off{
+#dining-room article, #letterA, #switcher-off{
     position: absolute;
 }
 
@@ -977,11 +977,11 @@ h1 span{
     z-index: 0;
 }
 
-#hint{
+#letterA{
     right: 20px;
     top: 120px;
     color: rgba(104, 220, 255, 0.829);
-    z-index: 1;
+    z-index: 2;
 }
 
 #dining-room>img{

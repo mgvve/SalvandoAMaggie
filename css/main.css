@@ -338,7 +338,7 @@ audio{
 }
 #bote1{
     background-color: crimson;
-    width:10px;
+    width:11px;
     height: 15px;
     border-radius: 0px 0px 5px 5px;
 }
@@ -1850,7 +1850,38 @@ button {
     left: 350px;
 
 }
-
+#maggiesimpsons{
+    width: 130px;
+    height: 150px;
+    position: absolute;
+    left:49.8%;
+    bottom:58%;
+    z-index:3;
+    animation: kodos-and-maggie 1s infinite linear alternate
+}
+#kodos{
+    width: 240px;
+    height: 340px;
+    position: absolute;
+    left:41%;
+    bottom:50%;
+    animation:kodos-and-maggie 1s infinite linear alternate
+}
+@keyframes kodos-and-maggie {
+    from{
+        transform:translateY(-40px)
+    }
+    to{
+        transform:translateY(40px)
+    }
+}
+#srburns{
+    width: 160px;
+    height:330px;
+    position: absolute;
+    left:31%;
+    bottom:40%;
+}
 #redbottom{
     position: absolute;
     width: 75px;
@@ -1897,14 +1928,14 @@ button {
 #duende_pared{
 	position: absolute;
 	top : 3%;
-	left: 1040px;
+    right:21%;
 	animation: musical-notes alternate infinite 0.2s ;
     transform-style: initial;
 
 }
 #duende_pared{
-    width: 250px;
-    height: 350px;
+    width: 220px;
+    height: 320px;
 }
 
 /* No se si quitar esta animación

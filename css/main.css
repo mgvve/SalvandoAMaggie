@@ -1184,6 +1184,13 @@ h1{
     z-index: 2;
 }
 
+#hallway .right-arrow{
+    right: 330px;
+}
+
+#hallway .left-arrow{
+    left: 350px;
+}
 /*================================BART ROOM================================*/
 
 #bart-room{
@@ -1466,6 +1473,7 @@ input {
     left:45%;
     font-size: 70px;
 }
+
 @keyframes letra{
     0%{
         transform:translateY(-20px);opacity:1

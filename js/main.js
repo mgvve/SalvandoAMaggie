@@ -32,7 +32,6 @@ function showLisaAndLetter(){
     lisaroom.removeChild(mensajeParlante2)
 }
 
-
 function parlante1(){
     let mensaje= document.getElementById("mensajeParlante")
     mensaje.innerText="Aqui no hay nada, sigue buscando"
@@ -48,8 +47,8 @@ function moverMouse(){
     let lisaanimada = document.getElementById("lisaanimada")
     lisaanimada.style.display="block"
     lisasroom.removeChild(lisa)
-
 }
+
 // Hall
 
   (function(){
@@ -58,7 +57,11 @@ function moverMouse(){
       puerta.addEventListener("click",function(){puerta.style.transform = "rotateY(110deg)"} );
     }())
 
-    
+    function moveBall(){
+        let ball = document.getElementById("pelota1");
+        ball.classList.add("ballMov");
+    }
+
 //Living Room
 
 function moveCushion(){
@@ -67,6 +70,7 @@ function moveCushion(){
     document.getElementById("letrag").style.zIndex = 2;
 }
 // Kitchen
+
 function atenderTel(){
     let telefono = document.getElementById("telefono");
     telefono.style.transform = "rotateZ(-50deg)";
@@ -75,12 +79,16 @@ function atenderTel(){
     kitchen.removeChild(notaMusical)
     let mensaje = document.getElementById("mensaje");
     mensaje.innerText="Un anciano malvado busca vengarse de su asesin@"
-    
  }
- function colgar(){
-     telefono.style.transform = "rotateZ(0deg)"
- }
+
+function colgar(){
+    telefono.style.transform = "rotateZ(0deg)"
+}
  
+function moveManopla(){
+    let manopla = document.getElementById("manopla");
+    manopla.classList.add("manoplaMov");
+}
 
 // Intro
 

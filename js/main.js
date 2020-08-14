@@ -69,6 +69,20 @@ function moveCushion(){
     cushion.classList.add("cushionMov");
     document.getElementById("letrag").style.zIndex = 2;
 }
+function attendPhone(){
+    let living= document.getElementById("living")
+     let message = document.createElement ("div")
+    message.innerHTML="<h4>El raptor es débil pero es <br> el más poderoso de Springfield</br></h4>"
+     message.id="messageliving"
+    let cont = document.getElementById("note")
+    let cont2 = document.getElementById("note2")
+    cont.style.display="none"
+    cont2.style.display="none"
+    living.appendChild(message)
+
+    
+
+}
 // Kitchen
 
 function atenderTel(){

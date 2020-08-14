@@ -769,6 +769,7 @@ audio{
 
 .nota1{
     position: absolute;
+    
 }
 
 .nota2{
@@ -860,7 +861,32 @@ audio{
         opacity: 0;
     }
 }
-
+#phoneliving{
+    position:absolute;
+    left:15.4%;
+    top:42.6%;
+    width:110px;
+    height:27px;
+}
+#messageliving{
+    position:absolute;
+    font-size:20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left:15%;
+    top:15%;
+    font-style:italic;
+    animation: messagephone 1s linear 
+}
+@keyframes messagephone{
+    from{
+        opacity:0;
+        transform:translateY(10px)
+    }
+    to{
+        opacity:1;
+        transform:translateY(-30px)
+    }
+}
 /*================================KITCHEN=================================================================*/
 
 #kitchen{

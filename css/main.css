@@ -1237,7 +1237,7 @@ input {
     height: 90px;
 }
 
-#letter {
+#letterC {
     position: absolute;
     bottom: 85px;
     right: 425px;
@@ -1252,8 +1252,7 @@ input {
     cursor: pointer;
 }
 
-#letter:hover {
-    border: solid #fff 2px;
+#letterC:hover {
     color: #fff;
     font-size: 10px;
 }

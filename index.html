@@ -13,6 +13,7 @@
             <div id="intro" class="slides">
                 <audio controls id="audio" loop>
                     <source src="audio/background-music.mp3" type="audio/mp3">
+                        <img src="https://img.icons8.com/clouds/100/000000/high-volume.png"/>
                         <p>If audio does not start, the <audio> HTML element is not supported in your browser.</p>
                 </audio>
                     <img src="img/intro/clouds/1.png" alt="cloud1" id="cloud1" class="r-clouds" class="clouds">
@@ -40,7 +41,7 @@
                 <!-- <img src="img/entry/prueba.gif" id="homer-walking" class="walk"> -->
             
                 <div class="typing">
-                    <h1>¡Gracias por ayudarme! Esta es mi casa... La última vez que vimos a Maggie estaba en su cuarto. Pero cuando volví me pedían una clave de 7 letras para entrar. Miremos adentro de la casa para ver si encontramos algo que nos pueda indicar cómo entrar al cuarto de Maggie.<span>&#160</span></h1>
+                    <h1>¡Gracias por ayudarme! Esta es mi casa... La última vez que vimos a Maggie estaba en su cuarto. Pero cuando volvmos nos pedían una clave de 7 letras para entrar. Miremos adentro de la casa para ver si encontramos algo que nos pueda indicar cómo entrar al cuarto de Maggie.<span>&#160</span></h1>
                 </div>
             </div>
             
@@ -48,7 +49,7 @@
                 <div class="recolectador"></div>
                 <div id="piso"></div>
                 <div id="puertacentral">
-                 <button id="picaporte"></button>
+                    <button id="picaporte"></button>
                 </div>
                 
                 <div id="puertacdentro">
@@ -58,7 +59,7 @@
                         <div id="estante3">
                             <img id="lapiz"src="https://i.pinimg.com/originals/0c/24/c4/0c24c472efce2ca9da0acdc591bc03a9.png" alt="">
                             </div>
-                        <div id="estante4"> <img id="pelota1" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
+                        <div id="estante4"> <img onclick="moveBall()" id="pelota1" src="https://www.pinclipart.com/picdir/big/39-397696_pelota-playa-png-pelota-de-playa-png-clipart.png" alt="" >
                         <h3 onclick="letraE()" id="letra">E</h3></div>
                         <div id="estante5"><img id="sombrero" src="https://images.vexels.com/media/users/3/164659/isolated/preview/ef1e943bbf78c6e61841680157a8a6b3-dibujos-animados-de-sombrero-de-sheriff-occidental-by-vexels.png" alt=""></div>
                         <div></div>
@@ -84,8 +85,7 @@
                         <div id="16e"></div>
                         <div id="17e"></div>
                     </div>
-    
-                 </div>
+                </div>
                 <div id="railing">
                    <div id="baranda"></div> 
                    <div id="sosten"></div>
@@ -97,7 +97,7 @@
                 <div id="right-door"></div>
                 <img id="vistacocina" src="img/Hall/vistacocina.png" alt="vistacocina">
                 <img id="vistaliving" src="img/Hall/vistaliving.png" alt="">
-                 <img id="llaveluz" src="img/Hall/llaveluz.png" alt="">
+                <img id="llaveluz" src="img/Hall/llaveluz.png" alt="">
                 <div id="alfombra">
                     
                 </div>
@@ -176,7 +176,7 @@
                   
                     <img id="cafetera" src="img/kitchen/cafetera (1).png" alt="">
                     <h3 id="letterS" onclick="letraS()">S</h3>
-                    <img id="manopla" src="img/kitchen/manopla.png" alt="">
+                    <img onclick="moveManopla()" id="manopla" src="img/kitchen/manopla.png" alt="">
                     <img ondblclick="colgar()" onclick="atenderTel()" id="telefono" src="img/kitchen/telefono.png" alt="">
                 </div>
                 <img class="nota3" src="img/living-room/nota1.png" alt="nota3" id="nota3">
@@ -193,6 +193,9 @@
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
                     </a>
                 </div>
+                <div class="typing">
+                    <h1>Sé que estamos buscando a Maggie, pero todo esto me dio mucha hambre. Comeré algo mientras buscas en esta habitación. Esta deliciosa comida seguro nos dará suerte...<span>&#160</span></h1>
+                </div>
 
                 <img src="img/dining-room/carpet.png" alt="carpet" id="carpet">
                 <img src="img/dining-room/painting.png" alt="painting" id="painting">
@@ -202,7 +205,8 @@
                 <img src="img/dining-room/curtain.png" alt="curtain" id="curtain">
                 <img onclick="Switcher_off()" src="img/dining-room/switcher.png" alt="switcher" id="switcher-on">
 
-                <article>Cuanto más oscuro, mejor se ve...</article>
+                <article>Cuanto más oscuro, mejor
+                     se ve...</article>
                 <h3 id="letterA" class="" onclick="letraA()"></h3>
                 <div id="darkness">
                     <span id="switcher-off">            
@@ -230,12 +234,12 @@
                 <img src="img/caja cerrada.png" alt="box" id="box2">
                 <img src="img/caja cerrada.png" alt="box" id="box3">
                 <div class="right-arrow">
-                    <a href="#bart-room">
+                    <a href="#lisa-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
                     </a>
                 </div>
                 <div class="left-arrow">
-                    <a href="#lisa-room">
+                    <a href="#bart-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
                     </a>
                  </div>
@@ -245,11 +249,11 @@
                     </a>
                 </div>
                 <div class="typing">
-                    <h1>¡Estamos en el segundo piso de la casa! Recorramos las habitaciones para encontrar las letras que faltan... Nol olvidemos revisar acá también. Tengo un buen presentimiento con este lugar...<span>&#160</span></h1>
+                    <h1>¡Estamos en el segundo piso de la casa! Acá puedes ver que me piden la clave para entrar a la habitación. Recorramos las habitaciones para encontrar las letras que faltan. No olvidemos revisar acá también. Tengo un buen presentimiento. <br>Cuando tengamos todas las letras volvamos a este lugar para poder ingresarlas...<span>&#160</span></h1>
                 </div>
             </div>
 
-            <div onmousemove="moverMouse()" id="lisa-room" class="slides">
+            <div id="lisa-room" class="slides" onmousemove="moverMouse()">
                 <div class="recolectador"></div>
                 <div id="pisolisa"></div>
                 <div id="ventana">
@@ -301,10 +305,11 @@
                 <h4 id="mensajeParlante"></h4>
                 <h4 id="mensajeparlante2"></h4>
                 
-               
-               
-                
-              
+                <div class="left-arrow">
+                    <a href="#hallway">
+                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
+                    </a>
+                </div>
                 <div id="cama">
                     <div id="lado-central"></div>
                     <div id="lado-izquierdo"></div>
@@ -320,12 +325,6 @@
                 <div class="typing">
                     <h1>¡Oh aquí esta Lisa!, quizá podría ayudarnos a decifrar dónde se encuentre la proxima letra... ¡Sigamos buscando!<span>&#160</span></h1>
                 </div>
-
-                <div class="right-arrow">
-                    <a href="#hallway">
-                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
-                    </a>
-                </div>
             </div>
 
             <div id="bart-room" class="slides">
@@ -336,9 +335,14 @@
                 <img id="nube4" src="img/bart-room/nubee3.png" alt="nube4">
                 <img src="img/bart-room/ball1.png" alt="ball" id="ball">
                 <button id="letter" mouseover="show(letterC)" onclick="letraC()">C</button>
-                <div class="left-arrow">
+                <div class="left-arrow"></div>
+                <div class="typing">
+                    <h1>¡Qué desordenada esta habitación! Sabemos que las letras están desordenadas pero la habitación de Bart seguro será más difícil de ordenar que estas letras... <span>&#160</span></h1>
+                </div>
+                <button id="letter" mouseover="show(letterC)" onclick="letraC()"></button>
+                <div class="right-arrow">
                     <a href="#hallway">
-                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
+                        <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
                     </a>
                 </div>
             </div>

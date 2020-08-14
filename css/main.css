@@ -1263,7 +1263,7 @@ input {
     height: 90px;
 }
 
-#letter {
+#letterC {
     position: absolute;
     bottom: 85px;
     right: 425px;
@@ -1278,8 +1278,7 @@ input {
     cursor: pointer;
 }
 
-#letter:hover {
-    border: solid #fff 2px;
+#letterC:hover {
     color: #fff;
     font-size: 10px;
 }
@@ -1293,7 +1292,7 @@ input {
 
 .oval {
     position: absolute;
-    left: 117px;
+    left: 120px;
     top: 50px;
     width: 170px;
     height: 240px;

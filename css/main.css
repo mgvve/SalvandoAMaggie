@@ -36,7 +36,7 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-around;
-    border-radius:20px;
+    border-radius: 20px;
     animation: recolectador 2s linear;
     z-index: 100;
 }
@@ -1068,12 +1068,11 @@ audio{
     width: 12%;
     top: 325px;
     right: 600px;
-    animation: chicken 10s forwards linear;
 }
 
-@keyframes chicken{
-    from{transform: translateX(0);}
-    to{transform: translateX(80px);}
+#chicken:hover{
+    transform: translateX(80px);
+    transition-duration: 2s;
 }
 
 #glass{
@@ -1123,14 +1122,14 @@ audio{
     width: 100px;
     position: absolute;
     bottom: 100px;
-    left: 500px;
+    left: 550px;
 }
 
 #box2 {
     width: 100px;
     position: absolute;
     bottom: 50px;
-    left: 480px;
+    left: 520px;
     z-index: 1;
 }
 
@@ -1138,7 +1137,7 @@ audio{
     width: 100px;
     position: absolute;
     bottom: 100px;
-    right: 600px;
+    right: 590px;
     z-index: 1;
 }
 
@@ -1162,7 +1161,7 @@ audio{
     font-family: 'Lexend Zetta', sans-serif;
     position: absolute;
     bottom: 60px;
-    left: 520px;
+    left: 550px;
     cursor: pointer;
     z-index: 2;
 }
@@ -1172,7 +1171,7 @@ audio{
     font-family: 'Lexend Zetta', sans-serif;
     position: absolute;
     bottom: 140px;
-    left: 520px;
+    left: 570px;
     cursor: pointer;
     z-index: 2;
 }

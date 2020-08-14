@@ -56,7 +56,7 @@ h1 span{
     position: absolute;
     right: 0;
     width: 0;
-    background: rgb(92, 92, 243);
+    background: rgb(172, 172, 172);
     border-left: 1px solid #000; 
     animation: typing 10s steps(225) infinite;
 }
@@ -228,7 +228,7 @@ audio{
 
 #entry-door, #to-hall{
     position: absolute;
-    bottom: 191px;
+    bottom: 173px;
     left: 499px;
 }
 
@@ -1195,6 +1195,13 @@ audio{
 
 /*================================BART ROOM================================*/
 
+#bart-room .typing{
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    top: 7%;
+    z-index:2
+}
 #bart-room{
     grid-row: 1;
     grid-column: 3;
@@ -1230,7 +1237,7 @@ audio{
 
 #form {
     position: absolute;
-    right: 65px;
+    right: 575px;
     bottom: 380px;
     display: flex;
     flex-direction: column;

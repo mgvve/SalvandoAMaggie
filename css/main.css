@@ -1191,6 +1191,25 @@ h1{
 #hallway .left-arrow{
     left: 350px;
 }
+
+#form {
+    position: absolute;
+    top: 250px;
+    left: 690px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 90px;
+    font-family: 'Lexend Zetta', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+
 /*================================BART ROOM================================*/
 
 #bart-room{
@@ -1205,63 +1224,125 @@ h1{
 
 #ball {
     position: absolute;
-    bottom: 100px;
+    bottom: 60px;
     right: 400px;
-    width: 80px;
-    height: 60px;
+    width: 60px;
+    height: 90px;
 }
-
-#false {
-    position: absolute;
-    left: 215px;
-    bottom: 130px;
-    background-color: #c2b0ed;
-    width: 20px;
-    height: 20px;
-    border-color: #c2b0ed;
-}
-
-#false:hover {
-    border-color: #fff;
-    cursor: pointer;
-}
-
-#form {
-    position: absolute;
-    right: 65px;
-    bottom: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    width: 90px;
-    font-family: 'Lexend Zetta', sans-serif;
-    text-align: center;
-    border-radius: 4px;
-}
-
 
 #letter {
     position: absolute;
-    bottom: 130px;
-    right: 430px;
-    width: 14px;
-    height: 14px;
+    bottom: 85px;
+    right: 425px;
+    width: 17px;
+    height: 17px;
     padding: 2px;
     font-size: 10px;
     background-color: black;
     border-radius: 10px;
     border: 0;
-    color: #fff;
+    color: black;
     cursor: pointer;
 }
 
 #letter:hover {
     border: solid #fff 2px;
+    color: #fff;
+    font-size: 10px;
 }
 
+#krusty {
+    position: absolute;
+    left: 76px;
+    top: 33px;
+    z-index: 2;
+}
+
+.oval {
+    position: absolute;
+    left: 117px;
+    top: 50px;
+    width: 170px;
+    height: 240px;
+    background: rgb(246, 156, 85);
+    border-radius: 50%;
+    animation: colorchange 5s linear 1s infinite;
+    -webkit-animation: colorchange 5s linear 0s infinite alternate;
+    z-index: 1;
+}
+
+  @keyframes colorchange
+  {
+    0%   {background: #f7e293; color: #fdb078;}
+    33%  {background: #f36273; color: #f0f0f0;}
+    66%  {background: #2a9c9d; color: #54687a;}
+    100% {background: #f7e293; color: #fdb078;}
+ }
+
+  @-webkit-keyframes colorchange 
+  {
+    0%   {background: red; color: cyan;}
+    33%  {background: green; color: magenta;}
+    66%  {background: blue; color: yellow;}
+    100% {background: red; color: cyan;}
+ }
+ 
+ #nube3{
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 750px;
+    top: 95px;
+    animation: nube3 ;
+    animation-timing-function: linear;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+#nube4{
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 750px;
+    top: 130px;
+    animation: nube4 ;
+    animation-timing-function: linear;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+
+@keyframes nube3{
+    0%{
+     transform: translateX(60px);
+     opacity: 1;
+    }
+    50%{
+        transform: translateX(40px);
+        opacity:0
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1
+    }
+}
+
+@keyframes nube4{
+    0%{
+     transform: translateX(40px);
+     opacity: 1;
+    }
+    50%{
+        transform: translateX(20px);
+        opacity:0
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1
+    }
+}
 
 /*================================LISA ROOM================================*/
 

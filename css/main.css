@@ -1143,7 +1143,13 @@ audio{
     /* background-size: 60%; */
     background-color: #d07e8a;
 }
-
+#mensajecaja{
+    position:absolute;
+    z-index:3;
+    font-size:20px;
+    left:4%;
+    bottom:30%
+}
 #box1 {
     width: 100px;
     position: absolute;

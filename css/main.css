@@ -1143,12 +1143,28 @@ audio{
     /* background-size: 60%; */
     background-color: #d07e8a;
 }
+#fraseCaja{
+    position:relative
+}
 #mensajecaja{
     position:absolute;
     z-index:3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
     font-size:20px;
     left:4%;
-    bottom:30%
+    bottom:30%;
+    animation: mensajecaja 1s linear 
+}
+@keyframes mensajecaja {
+    from{
+        opacity:0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(-40px)
+    }
 }
 #box1 {
     width: 100px;

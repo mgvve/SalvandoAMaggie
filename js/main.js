@@ -215,7 +215,7 @@ function letraS(){
 function mensajeCaja(){
     let hall= document.getElementById("hallway")
      let messageC = document.createElement ("div")
-    messageC.innerHTML="<h4>La palabra es un nombre y comienza con C y termina con S</h4>"
+    messageC.innerHTML="<h4 id='fraseCaja'>La palabra es un nombre, comienza con C y termina con S</h4>"
     messageC.id = "mensajecaja"
     
     hall.appendChild(messageC)
